@@ -1,0 +1,38 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Diphylleia&display=swap');
+
+.font-link{
+    font-family: 'Diphylleia';
+}
+.font-import{
+    font-family: 'Diphylleia', serif;
+    font-size:40px ;
+}
+@font-face {
+    font-family: 'SOGANGUNIVERSITYTTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/SOGANGUNIVERSITYTTF.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+.noonnu{
+    font-family: 'SOGANGUNIVERSITYTTF'
+}
+.sentences{
+    font-family: 700;
+    font-size: 20px;
+    text-align: left;
+    text-align: right;
+    text-align: center;
+
+    text-decoration: line-through;
+    text-decoration: underline;
+    text-decoration: overline;
+    text-decoration: none;
+line-height: 32px;
+}
+a{
+    text-decoration: none;
+    color:black;
+    color: #00000000;
+    color:rgb(0,0,0);
+}

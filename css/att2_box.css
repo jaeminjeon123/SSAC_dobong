@@ -1,0 +1,67 @@
+.d-block{
+    display: block;
+    background-color: aquamarine;
+    border:1px solid black;
+    width: 100px;
+    height: 100px
+    ;
+    padding: 15px;
+
+    
+}
+.d-inline{
+    display: inline;
+    background-color: pink;
+    width: 100px;
+    height: 200px;
+    padding: 15px;
+    
+}
+.d-inline-block{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: yellowgreen;
+    border: 1px solid blue;
+    padding: 15px;
+
+}
+.parent{
+width:400px;
+height: 200px;
+background-color: red;
+/* width를 300으로 바꿀시 min은 400 유지 max는 같이줄어듬 */
+/* width를 500으로 바꿀시 max는 400 유지 min는 같이늘어남 */
+}
+.parent > .min{
+    min-width: 400px;
+    min-height: 100px;
+    background-color: orange;
+}
+.parent >  .max{
+    max-width: 400px;
+    max-height: 100px;
+    background-color: rebeccapurple;
+}
+.box {
+background-color: beige;
+border:1px solid black;
+}
+.box-px {
+    width: 50px;
+    height: 50px;
+}
+.box-view {
+    width: 50vw;
+    height: 50vw;
+}
+.box-per{
+    width: 50%;
+    height: 50%;
+}
+.rem{
+    font-size: 2rem;
+}
+.em{
+    font-size: 2em;
+}

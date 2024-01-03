@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Practice</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: orange;
+            height: 200px;
+            padding: 0 30px; /* 양 끝 간격을 위해 */
+        }
+        .box {
+            width: 200px;
+            height: 100px;
+            margin: 0 15px; /* 각 박스 사이의 간격을 30px로 만듦 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+        }
+        .html {
+            background-color: skyblue;
+        }
+        .css {
+            background-color: green;
+        }
+        .javascript {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box html">HTML</div>
+        <div class="box css">CSS</div>
+        <div class="box javascript">Javascript</div>
+    </div>
+</body>
+</html>
