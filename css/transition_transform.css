@@ -1,0 +1,13 @@
+
+.text {
+    
+    transform: translateX(100%); 
+    animation: text1 2s forwards; 
+}
+
+@keyframes text1 {
+    100% {
+       
+        transform: translateX(0%); 
+    }
+}
