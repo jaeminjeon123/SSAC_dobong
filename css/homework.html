@@ -8,35 +8,78 @@
         form {
             width: 400px;
         }
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px; 
+        }
+        .checkbox-group{
+            
+            display: flex;
+            flex-direction: row;
+           
+        }
+        textarea {
+            flex-grow: 1; 
+            margin-top: 10px; 
+        }
         button {
             background-color: indianred;
             color: white;
+            border:none;
             border-radius: 15%;
+            margin-left: auto; 
         }
-        .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: end;
+        button:active{
+            background-color:gray ;
+            color:indianred;
         }
-        .checkbox-group {
-            display: flex;
-            flex-direction: column;
-            margin-right: 20px;
+        textarea:focus {
+             background-color: pink; 
+            }
+
+       
+        .red-label {
+            color: red;
+        }
+        .blue-label {
+            color: blue;
+        }
+        .yellow-label {
+            color: yellow;
+        }
+        h3:hover {
+            background-color: black; 
+            color: white; 
+        }
+
+        
+        #red:checked + .red-label {
+            color: white;
+            background-color: red;
+        }
+        #blue:checked + .blue-label {
+            color: white;
+            background-color: blue;
+        }
+        #yellow:checked + .yellow-label {
+            color: black;
+            background-color: yellow;
         }
     </style>
 </head>
 <body>
-    
     <h3>건의 사항을 적어주세요!</h3>
     <div class="container">
+        <textarea name="" id="" cols="30" rows="8" placeholder="건의 사항"></textarea>
         <div class="checkbox-group">
-            <input type="checkbox">빨강<br>
-            <input type="checkbox">파랑<br>
-            <input type="checkbox">노랑<br>
+            <input type="checkbox" id="red"><label for="red" class="red-label">빨강</label>
+            <input type="checkbox" id="blue"><label for="blue" class="blue-label">파랑</label>
+            <input type="checkbox" id="yellow"><label for="yellow" class="yellow-label">노랑</label>
+            <button type="submit">제출</button>
         </div>
-        <textarea name="" id="" cols="80" rows="8">건의 사항</textarea>
-        <button type="submit">제출</button>
+     
+        
     </div>
-
 </body>
 </html>

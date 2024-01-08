@@ -1,0 +1,68 @@
+body{
+    background: linear-gradient(white,orange);
+    height: 2000px;
+    margin:0;
+    padding: 0;
+}
+div{
+    width: 100px;
+    height: 100px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 100px;
+    border:1px solid gray;
+}
+.position-static{
+ /* top,bottom,left,right 적용안됨 */
+    background-color: pink;
+  top:50px;
+    position: static;
+}
+.position-relative{
+ /* relative 일반적인 문서흐름에 따라 배치됨
+ 자기 자신을 기준으로   배치  */
+    position: relative;
+    background-color: aquamarine;
+    left: 100px;
+}
+.position-absolute{
+    /* static이 아닌 값을 갖는 제일 가까운 조상 기준 
+    문서흐름을 벗어남(자기 자리가 없어짐)
+    */
+    position: absolute;
+    background-color: gold;
+    top: 0;
+}
+.position-fixed{
+    /* viewport 기준으로 특정 위치에 배치
+    스크롤 되어도 고정으로 되어 움직이지 않음,header 제작시 많이 이용 */
+    background-color: coral;
+    position: fixed;
+    top: 0;
+}
+.container{
+    /* 기본 요소는 absolute로 설정하고 부모요소를 relative를 많이 사용 */
+    width: 400px;
+    height: 300px;
+    position: relative;
+}
+.container div{
+    width: 100px;
+    height: 100px;
+    border-radius:50px ;
+   
+}
+.container div:nth-child(1){
+    background-color: tomato;
+    left: 10px;
+    z-index: 2;
+}
+.container div:nth-child(2){
+    background-color: magenta;
+    left: 50px; 
+    z-index: 1;
+}
+.container div:nth-child(3){
+    background-color: beige;
+    z-index:3;
+}

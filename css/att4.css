@@ -1,0 +1,58 @@
+body{
+    height: 2000px;
+}
+.box{
+    display: inline-block;
+    width: 400px;
+    height: 200px;
+    border: 1px solid black;
+
+}
+.background{
+    background-color: palegreen;
+    background: red;
+    background: linear-gradient(45deg,black,white,orange);
+    background: linear-gradient(to bottom,black,white,orange);
+
+}
+.background-image{
+    background-image: url(./apple1.png);
+    /* background-repeat: repeat;
+    background-repeat: repeat-y;
+    /* background-repeat: repeat-x; */
+    background-repeat: no-repeat;
+    /* background-position: center top; */
+    /* background-position: 300px 200px; */
+    background-size: 50px; 
+    background-size: 90px 50px;
+    /* background-size: contain;  */
+    background-size: cover; 
+    background-color: pink;
+    /* background-attachment: fixed; */
+    
+}
+.lion1
+{ background-image: url(./lion.png);
+    width: 800px;
+    height: 500px;
+    background-position: center top;
+    background-repeat: repeat-x; 
+background-color: skyblue;
+}
+.lion2{ background-image: url(./lion.png);
+background-color: skyblue;
+background-position: left 100px top 30px ;
+
+background-repeat: no-repeat;
+background-size: cover; 
+
+width: 800px;
+    height: 500px;
+}
+.lion3{ background-image: url(./lion.png);
+background-color: skyblue;
+width: 800px;
+background-repeat: no-repeat;
+    height: 500px;
+    background-size: contain; 
+}
