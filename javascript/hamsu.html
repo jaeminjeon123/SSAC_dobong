@@ -3,38 +3,84 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>background실습</title>
+    <title>아이스크림 베스트 9</title>
+
     <style>
-      .circle {
-        width: 500px;
-        height: 500px;
+    
+
+      /* CSS */
+      .article-box {
+        display: inline-block;
+        margin: 10px;
+        padding: 30px;
+        border-radius: 20px;
+        background-color: rgb(255, 248, 248);
+        border: 1px solid rgb(250, 226, 231);
+      }
+
+      .img-box {
+        width: 180px;
+        height: 180px;
+        background-color: rgb(250, 226, 231);
         border-radius: 50%;
       }
 
-      .background {
-        display: flex;
-        position: relative;
-        background: linear-gradient(45deg, orange, #e714ba);
-      }
-
-      .background-image {
-        display: flex;
-        position: absolute;
-        width: 465px;
-        height: 465px;
-        background-image: url("https://i.namu.wiki/i/yHMdZs8LhKDP0D0XmvNkWe4NplRU5BDyXiZNDk5BTOd9ON5KtykFiDO_Q7SDpQLA-q9Q4fyFKfzM3apcZnPGtg.webp");
-        background-size: cover;
-        border: 7px solid white;
-        top: 10px;
-        left: 10px;
+      .text-center {
+        text-align: center;
       }
     </style>
   </head>
   <body>
-    <div class="container">
-      <div class="circle background">
-        <div class="circle background-image"></div>
-      </div>
-    </div>
+    <h1>HTML 요소 생성/추가하기</h1>
+
+   
+    <!-- WARNING: HTML 코드 변경 금지!! -->
+    <h2 class="text-center">이달의 맛 BEST9</h2>
+    <section class="text-center">
+      <!-- 이 곳에 article 태그가 추가되도록! -->
+    </section>
+
+    <script>
+      
+
+      const section = document.querySelector("section");
+      const icecreams = [
+        "내가 아인슈페너?!",
+        "엄마는 외계인",
+        "민트 초콜릿 칩",
+        "뉴욕 치즈케이크",
+        "아이스 초당옥수수",
+        "초콜릿 무스",
+        "체리쥬빌레",
+        "뮤! 넌 내거야",
+        "오레오 쿠키 앤 크림",
+      ];
+      
+        for (let i = 0; i < icecreams.length; i++) {
+            
+            const article = document.createElement('article');
+            article.className = 'article-box';
+            article.append(
+                Object.assign(document.createElement('img'), {
+                    className: 'img-box',
+                    src: `./image/icecream${i + 1}.png`
+                }),
+                 
+                Object.assign(document.createElement('h3'), {
+                    className: 'text-center',
+                    textContent: 'TOP'+[i + 1]
+                }),
+                Object.assign(document.createElement('div'), {
+                    className: 'text-center',
+                    textContent: icecreams[i]
+           
+                }
+                )
+            );
+           
+            section.append(article);
+}
+
+    </script>
   </body>
 </html>

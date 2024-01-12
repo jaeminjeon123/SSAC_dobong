@@ -1,31 +1,24 @@
-.picture {
-    width: 300px;
-    height: 200px;
-}
-
-.picture1 {
+.circle {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+  }
+  
+  .background {
+    display: flex;
+    position: relative;
+    background: linear-gradient(45deg, orange, #e714ba);
+  }
+  
+  .background-image {
+    display: flex;
     position: absolute;
-    top: 400px;
-    left: 100px;
-    z-index: 3;
-    transform: skewY(20deg)
-}
-
-.picture2 {
-    position: absolute;
-    top: 300px;
-    left: 400px;
-    z-index: 2;
-    transform: skewY(20deg)
-}
-
-.picture3 {
-    position: absolute;
-    top: 200px;
-    left: 700px;
-    z-index: 1;
-    transform: skewY(20deg)
-}
-.picture:hover{
-    transform: skewY(0);
-}
+    width: 465px;
+    height: 465px;
+    background-image:url(https://blog.kakaocdn.net/dn/bKVcVO/btqNmcAxUSG/5pKxpk03ahZ2GLyuvEdklk/img.jpg);
+    background-size: cover;
+    border: 7px solid white;
+    top: 10px;
+    left: 10px;
+  }
+  
