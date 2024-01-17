@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style>
+        .container{
+            display: flex;
+        }
+
+        .square{
+            width: 100px;
+            height: 100px;
+            background-color:black;
+            border: 1px solid red ;
+            margin: 15px;
+        }
+
+         
+        /*세로가 500px이상일 때*/
+ 
+        @media screen and (min-height: 700px )and (min-width: 700px){
+            .square{
+                background-color:blue;
+            
+            }
+            .container{
+                    display: block;
+                    }
+        } 
+     
+    </style> -->
+
+    <style>
+
+        div{
+            width: 100px;
+            height: 100px;
+            border: solid 5px black;
+        }
+        /* ~부터 ~까지 범위 작성 가능하다 */
+        @media (300px<width<600px) {
+            .more-and-less{
+                    background-color: purple;
+            }
+        }
+        @media(orientation: landscape){
+            body{
+                background-color: pink;
+
+            }
+        }
+        @media(orientation: portrait){
+            body{
+                background-color: gold;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- <P>미디어 쿼리 실습</P>
+    <div class="container">
+    <div class="square" ></div>
+    
+    <div class="square"></div>
+    
+    <div class="square"></div> 
+</div>-->
+<div class="more-and-less">more-and-less</div>
+</body>
+</html>
