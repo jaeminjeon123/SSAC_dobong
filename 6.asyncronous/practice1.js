@@ -1,4 +1,5 @@
 let name,txt,message;
+
 function call(name) {
     return new Promise((resolve, reject) => {
         setTimeout(function () {
@@ -17,7 +18,7 @@ function back(txt) {
     });
 }
 
-function hell() {
+function hell(message) {
     return new Promise((resolve, reject) => {
         setTimeout(function () {
             resolve("callback hell");
@@ -25,15 +26,13 @@ function hell() {
     });
 }
 
-call("kim")
-    .then(name => {
-        console.log(name + "반가워");
-        return back(name);
-    })
-    .then(txt => {
-        console.log(txt);
-        return hell();
-    })
-    .then(message => {
-        console.log("여기는 " + message);
-    });
+
+  async function execute() {
+  const name = await call("kim");
+  console.log(name + "반가워");
+  const txt = await back();
+  console.log(txt + "을 실행했구나");
+  const message = await hell();
+  console.log("여기는 " + message);
+}
+execute();
