@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>폼 전송 결과</title>
+    <style>
+        div{
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+        }
+        ul {
+            list-style-type: none; /* 기본 목록 스타일 제거 */
+            padding: 0;
+        }
+        li {
+            background-color: #f2f2f2; /* 배경색 */
+            margin: 10px 0; /* 상하 여백 */
+            padding: 15px; /* 내부 여백 */
+            border-radius: 10px; /* 둥근 모서리 */
+            width: 18%;
+            font-weight: bold;
+        }
+    </style>
+  </head>
+  <body>
+    <h1><%= title %> 요청 확인하기</h1>
+    <div><span><%= userInfo.id %></span>님 환영합니다!</div>
+
+    <!-- 성별 정보 표시 -->
+    <ul>  <li><% if(userInfo.gender) { %>
+        <div>성별: <%= userInfo.gender === 'male' ? '남자' : '여자' %></div>
+    <% } %></li>
+
+    <!-- 생년월일 정보 표시 -->
+   <li><% if(userInfo.year && userInfo.month && userInfo.day) { %>
+    <div>생년월일: <%= userInfo.year %>년 <%= userInfo.month %>월 <%= userInfo.day %>일</div>
+<% } %></li> 
+
+    <!-- 관심사 정보 표시 -->
+    <li> <% if(userInfo.interests) { %>
+        <div>선택한 관심사: <%= userInfo.interests.join(', ') %></div>
+    <% } %></li>
+    <li> <% if(userInfo.color) { %>
+        <div>좋아하는 색: <%= userInfo.color %></div>
+    <% } %></li>
+    <li> <% if(userInfo.number) { %>
+        <div>좋아하는 숫자: <%= userInfo.number %></div>
+    <% } %></li>
+    </ul>
+   
+   
+   
+
+    <a href="/">홈으로 이동하기</a>
+  </body>
+</html>

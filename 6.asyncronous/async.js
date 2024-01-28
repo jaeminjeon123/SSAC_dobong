@@ -23,13 +23,4 @@ async function execute(){
     await pickDrink();
     pay();
 }
-goMart();
-pickDrink().then(({ product, price }) => {
-    pay({ product, price });
-})
-.catch((err) => {
-    console.log(err);
-})
-.finally(() => {
-    console.log('마트에서 나왔어요');
-});
+

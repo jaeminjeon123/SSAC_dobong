@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form 배우기</title>
+    <style>
+        fieldset{
+            width: 20%;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>post 요청</h1>
+    <form action="/postForm" method="post">
+      <label>
+        이름:
+        <input type="text" name="id" required/>
+      </label>
+      <br />
+   
+     
+        <fieldset>
+            <legend>성별:</legend>
+            <label><input type="radio" name="gender" value="male" required> 남자</label>
+            <label><input type="radio" name="gender" value="female" required> 여자</label>
+        </fieldset>
+    
+        <fieldset>
+            <legend>생년월일</legend>
+            <label for="yearSelect">년
+                <select id="yearSelect" name="year">
+                    <!-- 연도 옵션 -->
+                    <% for(let i = 1985; i <= 2003; i++) { %>
+                        <option value="<%= i %>"><%= i %></option>
+                    <% } %>
+                </select>
+            </label>
+    
+            <label for="monthSelect">월
+                <select id="monthSelect" name="month" onchange="updateDays()">
+                    <% for(let i = 1; i <= 12; i++) { %>
+                        <option value="<%= i %>"><%= i %></option>
+                    <% } %>
+                </select>
+            </label>
+    
+            <label for="daySelect">일
+                <select id="daySelect" name="day">
+                    <% for(let i = 1; i <= 31; i++) { %>
+                        <option value="<%= i %>"><%= i %></option>
+                    <% } %>
+                </select>
+            </label>
+        </fieldset>
+    
+        <fieldset>
+            <legend>관심사 선택</legend>
+            <label><input type="checkbox" name="interests" value="여행"> 여행</label>
+            <label><input type="checkbox" name="interests" value="패션"> 패션</label>
+            <label><input type="checkbox" name="interests" value="음식"> 음식</label>
+        </fieldset>
+    
+ 
+        <fieldset>
+            <legend>선택</legend>
+            <label>좋아하는 색상<input type="color" name="color" > </label><br>
+            <label>좋아하는 숫자<input type="number" name="number" ></label>
+           
+        </fieldset>
+
+      
+      <button type="submit" value="제출">회원가입</button>
+    </form>
+
+   
+  </body>
+</html>
