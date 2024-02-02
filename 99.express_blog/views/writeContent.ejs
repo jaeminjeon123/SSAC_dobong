@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글 작성하기(폼 태그 제출)</title>
+   
+    <style>
+    h1{
+        text-align: center;
+        
+    }
+    form{
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 10px; /* 수정된 부분: 덜 원형적인 모양을 위해 */
+    margin: 20px auto; /* 폼을 수평 중앙 정렬하기 위해 */
+    width: 200px; /* 폼의 너비를 지정 */
+   
+    padding: 20px; /* 폼 내부에 여백 추가 */
+}
+
+input[type="text"], textarea, input[type="file"]{
+    width: 500px; /* 폼 내부 요소 너비 */
+    margin: 10px auto; /* 폼 내부 요소를 수평 중앙 정렬 */
+    
+    display: block; /* 요소를 블록 레벨로 만들기 */
+}
+
+button{
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    padding: 10px;
+    color: blue;
+    display: block; /* 버튼을 블록 레벨로 만들기 */
+    margin: 20px auto; /* 버튼을 수평 중앙 정렬 */
+}
+
+    </style>
+     <%- include('./include/head')  %>
+</head>
+<body>
+    <h1>글 작성하기</h1>
+    <form action="/blog/post" method="post" enctype="multipart/form-data">
+        <input type="text" name="title" placeholder="글 제목을 입력해주세요">
+        <textarea name="content" placeholder="내용을 입력해주세요"></textarea>
+        <input type="file" name="img">
+        <button type="submit">등록 </button>
+    </form>
+</body>
+</html>
