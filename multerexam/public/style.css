@@ -1,0 +1,41 @@
+
+/* style.css */
+label {
+    display: inline-block;
+    width: 90px; 
+  }
+
+h1 {
+    font-weight: bold;
+}
+#p1name{
+color: blue;
+}
+
+
+.container {
+    margin: 100px;
+    text-align: center;
+}
+
+ label.res {
+    display: inline-block;
+    width: 150px; 
+    text-align: left;
+    margin-left: 0px;
+    vertical-align: top; } 
+
+.data {
+    display: inline-block; 
+    min-width: 120px; 
+    vertical-align: top; 
+} 
+
+
+
+#profileImg {
+    width: 250px;
+    height: 250px;
+    box-shadow: 0 0 10px pink;
+}
+

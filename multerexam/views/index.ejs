@@ -1,0 +1,61 @@
+<!-- index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="/style.css">
+
+
+</head>
+<body>
+    <h1>파일 업로드</h1>
+    <form id="uploadForm" enctype="multipart/form-data">
+        <label for="id">아이디</label>
+        <input type="text" name="id" id="id"><br>
+    
+        <label for="password">비밀번호</label>
+        <input type="password" name="password" id="password"><br>
+    
+        <label for="name">이름</label>
+        <input type="text" name="name" id="name"><br>
+    
+        <label for="age">나이</label>
+        <input type="number" name="age" id="age"><br>
+    
+        <label for="userfile">프로필 사진</label>
+        <input type="file" name="userfile" id="userfile"><br>
+    
+        <button type="button" onclick="reset()">리셋</button>
+        <button type="button" onclick="submitForm()">회원가입</button>
+    </form>
+    
+    
+    <script>
+    function submitForm() {
+        const form = document.getElementById("uploadForm");
+        const formData = new FormData(form);
+        
+        axios.post('/uploads', formData, { responseType: 'json' })
+.then(function(response) {
+    if (response.request.responseURL) {
+        window.location.href = response.request.responseURL;
+    } else {
+        console.error('No redirect URL received.');
+    }
+})
+.catch(function(error) {
+    console.error('Error:', error);
+});
+
+    }
+
+    // 리셋 버튼을 눌렀을 때 실행될 함수
+    function resetForm() {
+        document.getElementById("uploadForm").reset();
+    }
+    </script>
+</body>
+</html>

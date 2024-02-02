@@ -1,0 +1,43 @@
+<!-- result-page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입 결과</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    
+       
+        <div class="container">
+            <h1><span id="p1name"><%= data.name %></span>님 마이페이지</h1>
+            <p>
+                <% if(data.filePath) { %>
+                    <img src="<%= data.filePath %>" alt="프로필 사진" id="profileImg">
+                <% } else { %>
+                    업로드된 파일이 없습니다.
+                <% } %>
+            </p>
+            <p class="info-row">
+            <label for="id" class="res"><span >아이디</span></label>
+            <span class="data"><%= data.id %></span>
+        </p>
+        <p class="info-row">
+            <label for="password" class="res"><span >비밀번호</span></label>
+            <span class="data"><%= data.password %></span>
+        </p>
+        <p class="info-row">
+            <label for="name" class="res"><span>이름</span></label>
+            <span class="data"><%= data.name %></span>
+        </p>
+        <p class="info-row">
+            <label for="number" class="res"><span>나이</span></label>
+            <span class="data"><%= data.age %></span>
+        </p>
+        
+      </div>
+    
+   
+</body>
+</html>
