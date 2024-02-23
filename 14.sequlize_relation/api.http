@@ -1,0 +1,34 @@
+@server=http://localhost:8080
+
+### Get all players
+GET {{server}}/players
+
+### Get a player by ID
+GET {{server}}/players/1
+
+### Create a new player
+POST {{server}}/players
+Content-Type: application/json
+
+{
+    "name": "손흥민",
+    "age": 31,
+    "teamId": 2
+}
+
+### Update a player's team
+PATCH {{server}}/players/1/team
+Content-Type: application/json
+
+{
+    "teamId": 3
+}
+
+### Delete a player by ID
+DELETE {{server}}/players/{{playerId}}
+
+GET {{server}}/teams
+GET {{server}}/teams?sort=name_asc
+GET {{server}}/teams?search=KT
+GET {{server}}/teams/{{teamId}}
+GET {{server}}/teams/{{teamId}}/players
