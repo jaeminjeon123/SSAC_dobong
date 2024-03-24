@@ -1,0 +1,18 @@
+.container{
+    border: 1px solid gray;
+    padding: 0.5rem;
+    margin:1rem 0;
+}
+.box2{
+    background-color: white;
+}
+.box2 div{
+    display: flex;
+    height: 100px;
+    width: 100px;
+
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    background-color: pink;
+}

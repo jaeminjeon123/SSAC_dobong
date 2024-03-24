@@ -1,0 +1,13 @@
+.box1{
+    background-color: white;
+}
+.box1 div{
+    display: flex;
+    height: 100px;
+    width: 100px;
+
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    background-color: pink;
+}
