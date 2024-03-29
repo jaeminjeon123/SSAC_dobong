@@ -1,0 +1,85 @@
+$color-red: #d04848;
+$color-orange: #f3b95f;
+$color-yellow: #fde767;
+$color-green: #96ceb4;
+$color-blue: #6895d2;
+
+$boxShadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+
+$animation-duration: 0.4s;
+
+@mixin box {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+// 매개변수 있는 ver. mixin
+@mixin circle($circleColor, $circleOpacity) {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 1px solid black;
+  display: inline-block;
+  background-color: $circleColor;
+  opacity: $circleOpacity;
+}
+
+@mixin box2($boxBgColor: $color-red, $boxFontSize: 15px, $boxColor: white) {
+  @include box();
+  background-color: $boxBgColor;
+  font-size: $boxFontSize;
+  color: $boxColor;
+  text-align: center;
+  line-height: 100px;
+
+  //   if문
+  @if $boxBgColor==$color-red {
+    border-radius: 50%;
+  } @else if $boxColor==black {
+    border-radius: 20%;
+  } @else {
+    border-radius: 0%;
+  }
+}
+// 색상 변수
+$color-pink: pink;
+$color-yellow: yellow;
+$color-green: green;
+
+// 원 생성 및 움직임을 위한 mixin
+@mixin move-circle($color, $distance) {
+  background-color: $color;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: relative;
+  animation-name: move-#{$color}; // 고유한 애니메이션 이름 사용
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+
+  @keyframes move-#{$color} { // 고유한 애니메이션 이름 사용
+    from {
+      top: 0;
+      left: 50%;
+    }
+    to {
+      top: $distance;
+      left: $distance;
+    }
+  }
+}
+
+.pink-circle {
+  @include move-circle($color-pink, 10px);
+}
+
+.yellow-circle {
+  @include move-circle($color-yellow, 20px);
+}
+
+.green-circle {
+  @include move-circle($color-green, 30px);
+}

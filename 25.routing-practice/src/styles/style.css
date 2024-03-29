@@ -1,0 +1,40 @@
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; /* 오른쪽 정렬 */
+    padding: 20px; /* 상단과 오른쪽 여백 */
+    box-sizing: border-box;
+    background-color: grey;
+  }
+  
+  .menu {
+    display: flex;
+    gap: 10px; /* 버튼 사이 간격 */
+  }
+  
+  .menu-item {
+    background-color: grey;
+    border: none;
+    padding: 10px 20px; /* 버튼 패딩 */
+    cursor: pointer; /* 마우스 오버 시 커서 변경 */
+    border-radius: 5px; /* 버튼 모서리 둥글게 */
+  }
+  
+  .menu-item:hover {
+    background-color: #e0e0e0; /* 마우스 오버 시 버튼 배경색 변경 */
+  }
+  .Student{
+    background-color: greenyellow;
+  }
+  .Codingon{
+    background-color: greenyellow;
+  }
+  .highlight {
+    color: blue; /* 파랑색 텍스트 */
+  }
+  .Query{
+    background-color: greenyellow;
+  }
+  .high{
+    color:red;
+  }
