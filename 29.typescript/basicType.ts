@@ -22,4 +22,5 @@ let obj1:object=
 {
     name:"alle",
     age:11,
-}
+};
+

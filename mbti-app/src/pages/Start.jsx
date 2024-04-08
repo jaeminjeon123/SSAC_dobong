@@ -6,15 +6,20 @@ import { next } from '../store/modules/mbti';
 const MainImg = styled.img`
 width: inherit;
 `;
+
 const Header = styled.p`
 font-size: 3rem;
 `;
+
 const SubHeader = styled.p`
 font-size: 1.5rem;
 color: #777;
 `;
+
 export default function Start() {
+    
     const dispatch=useDispatch()
+    
 return (
 <>
 <Header>개발자 MBTI 조사</Header>

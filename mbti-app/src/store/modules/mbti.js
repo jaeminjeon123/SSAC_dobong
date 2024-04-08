@@ -1,3 +1,4 @@
+
 const initialState={
     mbtiResult:``,
     page:0,
@@ -120,13 +121,15 @@ const initialState={
             text: '개발팀의 그 어떤 트러블도 당신 앞에서는 사르르 녹을뿐, 팀의 근간을 다져주는 당신의 MBTI 는!',
             img: '/assets/infp.jpg',
             },
-            },
-            };
+            }
+            
+        };
 
-const CHECK = 'mbti/CHECK';
-const NEXT = 'mbti/NEXT';
-const RESET = 'mbti/RESET';
-export function check(result) {
+    const CHECK = 'Mbti/CHECK';
+    const NEXT = 'mbti/NEXT';
+    const RESET = 'mbti/RESET';
+
+    export function check(result) {
     return {
     type: CHECK,
     payload: { result:result },
@@ -145,24 +148,30 @@ export function check(result) {
     };
     }
 
+        //reducer 부분 
     export function mbti(state=initialState,action){
-            switch(action.type){
+            
+        switch(action.type){
+
                 case CHECK:
                     return {
                     ...state,
-                    mbtiResult:state.mbtiResult+action.payload.result,//"IS"+"F"
+                    mbtiResult:state.mbtiResult+action.payload.result,//"IS"+"F" mbtiresult는 비어있고 action할때마다 값을 넣는 방식
                     };
+
                 case NEXT:
                     return{
                     ...state,
                     page:state.page+1,
                     };
+
                 case RESET:
                     return{
                         ...state,
                         page:0,
                         mbtiResult:"",
                 }
+
                 default:
                     return state;
 

@@ -7,13 +7,13 @@ const Fill=styled.div`
  height: 10px;
  width: 100%;
 `;
-const Guage=styled.div`
-background-color:skyblue;
+const Guage = styled.div`
+background-color: skyblue;
 height: 100%;
-width: ${(pros)=>pros.percent};
+width: ${(props) => `${props.percent}%`}; // 백분율 단위(%) 추가
 transition: 0.4s;
-`
-;
+`;
+
 export default function Progress({page,maxpage}){
     return (
         <ProgressContainer>

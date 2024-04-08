@@ -17,7 +17,9 @@ export default function Mbti() {
   console.log(survey);
   //[{question, answer:[{text, result}]},{question, answer:[{text, result}]}]
   const page = useSelector((state) => state.mbti.page); // 1
+  
   const dispatch = useDispatch();
+  
   return (
     <>
       <Question>{survey[page - 1].question}</Question>
